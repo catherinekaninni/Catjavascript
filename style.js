@@ -1,34 +1,29 @@
-function myFunction() {
-    let text;
-    let favDrink = prompt("What's your favorite drink?", "Coca-Cola");
-    switch(favDrink) {
-      case "Coca-Cola":
-        text = "Excellent choice. Coca-Cola is good for your soul.";
-        break;
-      case "Pepsi":
-        text = "Pepsi is my favorite too!";
-        break;
-      case "Sprite":
-        text = "Really? Are you sure the Sprite is your favorite?";
-        break;
-      default:
-        text = "I have never heard of that one..";
-    }
-    document.getElementById("demo").innerHTML = text;
+function My_Date() {
+  var n = document.getElementById("Test_Date").name;
+  document.getElementById("test").innerHTML = n;
+}
+function My_class(){
+  var y = document.getElementById("Test_class").name;
+  document.getElementById("test").innerHTML= y;
+}
+function My_subject(){
+  var z = document.getElementById("Test_subject").name;
+  document.getElementById("test").innerHTML
+}
+
+
+
+var hopperLab = {
+  name: "bar",
+  func: function () {
+    var self = this;
+    console.log("outer func:  this.name = " + this.name);
+    console.log("outer func:  self.name = " + self.name);
+    (function () {
+      console.log("inner func:  this.name = " + this.name);
+      console.log("inner func:  self.name = " + self.name);
+    }());
   }
-
-
-  var hopperLab = {
-    name: "bar",
-    func: function() {
-        var self = this;
-        console.log("outer func:  this.name = " + this.name);
-        console.log("outer func:  self.name = " + self.name);
-        (function() {
-            console.log("inner func:  this.name = " + this.name);
-            console.log("inner func:  self.name = " + self.name);
-        }());
-    }
 };
 
 hopperLab.func();
